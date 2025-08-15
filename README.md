@@ -19,7 +19,7 @@ python app.py
   ```
 - kubectl configured
 - AWS CLI configured
-- Docker with buildx support
+- Docker
 
 ### Step 1: Build and Push to ECR
 ```bash
