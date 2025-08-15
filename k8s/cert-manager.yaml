@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: selfsigned-issuer
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: cm-adapter-serving-certs
+  namespace: custom-metrics
+spec:
+  secretName: cm-adapter-serving-certs
+  issuerRef:
+    name: selfsigned-issuer
+    kind: ClusterIssuer
+  dnsNames:
+  - custom-metrics-apiserver.custom-metrics.svc
+  - custom-metrics-apiserver.custom-metrics.svc.cluster.local

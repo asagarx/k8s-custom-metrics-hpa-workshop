@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: python-web-app-monitor
+  labels:
+    app: python-web-app
+spec:
+  selector:
+    matchLabels:
+      app: python-web-app
+  endpoints:
+  - port: "8080"
+    path: /metrics
+    interval: 30s
