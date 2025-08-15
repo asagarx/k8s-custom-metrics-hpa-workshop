@@ -1,4 +1,4 @@
-# Simple Python Web Server with Metrics
+# Simple Python Web Server with Metrics to scale with HPA
 
 ## Overview
 This project demonstrates Kubernetes Horizontal Pod Autoscaler (HPA) scaling based on custom metrics. A Python Flask app exposes request metrics that Prometheus scrapes, and the HPA scales pods based on requests per second.
