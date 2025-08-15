@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: python-web-app
-        image: 397590882992.dkr.ecr.us-east-1.amazonaws.com/app_custom_metrics:latest
+        image: 
         imagePullPolicy: Always
         env:
         - name: POD_NAMESPACE
